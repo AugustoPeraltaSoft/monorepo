@@ -1,9 +1,9 @@
 {
-  "name": "@gskTest/common",
+  "name": "@gskTest/front",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "echo Common works like a charm!"
+    "test": "echo Front works awesome!"
   }
 }

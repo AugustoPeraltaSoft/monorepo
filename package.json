@@ -5,11 +5,16 @@
   ],
   "scripts": {
     "test": "lerna run test",
-    "new-version": "lerna version --conventional-commits yes",
+    "test-common": "lerna run test --scope=@gskTest/common",
+    "test-deps": "lerna run test --scope={@gskTest/server,@gskTest/front}",
+    "new-version": "lerna version --conventional-commit --changelog-preset angular-bitbucket",
     "diff": "lerna diff"
   },
   "name": "yarn-workspaces",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
 }

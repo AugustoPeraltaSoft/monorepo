@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/nicolasdanelon/yarn-workspaces/compare/v1.2.0...v1.3.0) (2021-02-26)
+
+
+### Features
+
+* update ([93471f8](https://github.com/nicolasdanelon/yarn-workspaces/commit/93471f8ceae17c1bf752f027c2bd3b67d728b8af))
+
+
+
+
+
 # [1.2.0](https://github.com/nicolasdanelon/yarn-workspaces/compare/v1.1.0...v1.2.0) (2021-02-26)
 
 

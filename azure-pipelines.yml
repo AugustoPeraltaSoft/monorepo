@@ -27,8 +27,8 @@ stages:
     jobs:
       - job: Test_Tag
         displayName: Test & Tag
-#        variables:
-#          _GITHUB_TOKEN: $(GitHubToken)
+        variables:
+          _GITHUB_TOKEN: $(GitHubToken)
 #          _NPM_TOKEN: $(NpmToken)
         steps:
           - script: npm run test
@@ -37,6 +37,7 @@ stages:
             displayName: 'checkout'
           - script: npm run new-version
             displayName: 'Tag version'
+            env: { GH_TOKEN: $(_GITHUB_TOKEN)}
 
 #  - stage: CI
 #    displayName: Continuous Integration

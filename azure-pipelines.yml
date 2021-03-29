@@ -20,7 +20,7 @@ resources:
 #  - template: variables.yaml
 
 stages:
-  - stage: Test&Tag
+  - stage: Test-Tag
     displayName: Test and Tag
     pool:
         vmImage: 'vs2017-win2016'

@@ -33,8 +33,14 @@ stages:
         steps:
           - script: npm run test
             displayName: 'Test'
-          - script: git config --global user.email augustoperaltamontero@gmail.com && git config --global user.name AugustoPeralta
-            displayName: 'Test'
+          - script: yarn install
+            displayName: 'install'
+          - script: |
+              git config --global user.email augustoperaltamontero@gmail.com &
+              git config --global user.name "AugustoPeralta"
+              git config user.email
+              git config user.name
+            displayName: 'setting git'
           - script: git checkout master
             displayName: 'checkout'
           - script: npm run new-version

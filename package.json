@@ -4,7 +4,7 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "lerna run test",
+    "test": "lerna run test --since ",
     "test-common": "lerna run test --scope=@gskTest/common",
     "test-deps": "lerna run test --scope={@gskTest/server,@gskTest/front}",
     "new-version": "lerna version --conventional-commits --yes",

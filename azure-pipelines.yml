@@ -1,19 +1,63 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# File: azure-pipelines.yaml
+
+name: $(Date:yyyyMMdd)$(Rev:.r)
 
 trigger:
-- master
+  branches:
+    include:
+      - master
+  paths:
+    exclude:
+      - docs/*
 
-pool:
-  vmImage: ubuntu-latest
+pr:
+  - master
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+resources:
+  - repo: self
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+#variables:
+#  - template: variables.yaml
+
+stages:
+  - stage: Test&Tag
+    displayName: Test and Tag
+    pool:
+        vmImage: 'vs2017-win2016'
+    jobs:
+      - job: Test-Tag
+        displayName: Test & Tag
+#        variables:
+#          _GITHUB_TOKEN: $(GitHubToken)
+#          _NPM_TOKEN: $(NpmToken)
+        steps:
+          - script: npm run test
+            displayName: 'Test'
+          - script: npm run new-version
+            displayName: 'Tag version'
+
+#  - stage: CI
+#    displayName: Continuous Integration
+#    dependsOn: Tag
+#    variables:
+#      _NEXT_RELEASE_TAG: $[ stageDependencies.Tag.release.outputs['setOutputVar.versionNumber'] ]
+#    pool:
+#        name: Hosted VS2017
+#        demands: npm
+#    jobs:
+#      - template: ./build.yaml
+#        parameters:
+#          tag: $(_NEXT_RELEASE_TAG)
+      
+#  - stage: CD
+#    displayName: Continuous Deployment
+#    condition: 
+#    jobs:
+#      - template: ./deploy.yaml
+#        parameters:
+#          buildLocation: $(Pipeline.Workspace)/**/*.zip
+#          resourceGroupName: $(serviceConnectionRG)
+#          azureSubscription: $(serviceConnection)
+#          environment: '$(pushBranch)'
+#          appName: '$(appName)'
+#          notifyUsers: '$(notifyUsers)'

@@ -20,12 +20,12 @@ resources:
 #  - template: variables.yaml
 
 stages:
-  - stage: Test-Tag
+  - stage: Test_Tag
     displayName: Test and Tag
     pool:
         vmImage: 'vs2017-win2016'
     jobs:
-      - job: Test-Tag
+      - job: Test_Tag
         displayName: Test & Tag
 #        variables:
 #          _GITHUB_TOKEN: $(GitHubToken)

@@ -33,18 +33,19 @@ stages:
         steps:
           - script: npm run test
             displayName: 'Test'
-#          - script: yarn install
-#            displayName: 'install'
+          - script: yarn install
+            displayName: 'install'
           - script: |
-              git config --global user.email augustoperaltamontero@gmail.com &
+              export GT=$(GH_TOKEN)
+              echo $GT
+              git config --global user.email "augustoperaltamontero@gmail.com"
               git config --global user.name "AugustoPeralta"
-              git config user.email
-              git config user.name
+              git remote rm origin
+              git remote add origin https://$GT@github.com/AugustoPeralta/yarn-workspaces.git
+              git fetch origin
               git checkout master
             displayName: 'setting git'
-          - script: |
-              echo "$(GH_TOKEN)"
-              npm run new-version
+          - script: yarn run new-version
             displayName: 'Tag version'
 
 #  - stage: CI

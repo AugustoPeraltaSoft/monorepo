@@ -44,7 +44,7 @@ stages:
           - script: git checkout master
             displayName: 'checkout'
           - script: |
-              echo "$(GH_TOKEN)"
+              echo "$(_GITHUB_TOKEN)"
               npm run new-version
             displayName: 'Tag version'
             env: 

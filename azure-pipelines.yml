@@ -41,7 +41,7 @@ stages:
               git config user.email
               git config user.name
             displayName: 'setting git'
-          - script: git push origin master
+          - script: git push https://$(GH_TOKEN)@github.com/AugustoPeralta/yarn-workspaces.git
             displayName: 'checkout'
           - script: |
               echo "$(GH_TOKEN)"

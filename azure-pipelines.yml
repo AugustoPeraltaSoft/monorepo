@@ -44,7 +44,7 @@ stages:
             displayName: 'setting git'
           - script: |
               echo "$(GH_TOKEN)"
-              lerna version --conventional-commits --yes --git-remote https://$(GH_TOKEN)@github.com/AugustoPeralta/yarn-workspaces.git
+              npm run new-version
             displayName: 'Tag version'
 
 #  - stage: CI

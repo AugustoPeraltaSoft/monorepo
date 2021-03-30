@@ -46,7 +46,7 @@ stages:
             displayName: 'checkout'
           - script: |
               echo "$(GH_TOKEN)"
-              npm run new-version
+              lerna version --conventional-commits --yes https://$(GH_TOKEN)@github.com/AugustoPeralta/yarn-workspaces.git
             displayName: 'Tag version'
             env: 
               GH_TOKEN: algo

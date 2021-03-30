@@ -48,7 +48,7 @@ stages:
               npm run new-version
             displayName: 'Tag version'
             env: 
-              GH_TOKEN: $(_GITHUB_TOKEN)
+              GH_TOKEN: algo
 
 #  - stage: CI
 #    displayName: Continuous Integration

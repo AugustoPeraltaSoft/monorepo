@@ -28,16 +28,23 @@ stages:
       - job: Test_Tag
         displayName: Test & Tag
         variables:
-          _GITHUB_TOKEN: $(GitHubToken)
+            GH_TOKEN: $(GitHubToken)
 #          _NPM_TOKEN: $(NpmToken)
         steps:
           - script: npm run test
             displayName: 'Test'
-          - script: git checkout master
-            displayName: 'checkout'
-          - script: npm run new-version
+          - script: yarn install
+            displayName: 'install'
+          - script: |
+              git config --global user.email "augustoperaltamontero@gmail.com"
+              git config --global user.name "AugustoPeralta"
+              git remote rm origin
+              git remote add origin https://$(GH_TOKEN)@github.com/AugustoPeralta/yarn-workspaces.git
+              git fetch origin
+              git checkout master
+            displayName: 'setting git'
+          - script: yarn run new-version
             displayName: 'Tag version'
-            env: { GH_TOKEN: $(_GITHUB_TOKEN)}
 
 #  - stage: CI
 #    displayName: Continuous Integration

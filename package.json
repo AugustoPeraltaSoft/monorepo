@@ -10,6 +10,7 @@
     "new-version": "lerna version --conventional-commits --yes",
     "diff": "lerna diff",
     "changed": "lerna ls --since master"
+
   },
   "name": "yarn-workspaces",
   "version": "1.0.0",

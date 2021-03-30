@@ -44,10 +44,11 @@ stages:
           - script: git checkout master
             displayName: 'checkout'
           - script: |
-              echo $(GH_TOKEN)
+              echo "$(GH_TOKEN)"
               npm run new-version
             displayName: 'Tag version'
-            env: { GH_TOKEN: $(_GITHUB_TOKEN)}
+            env: 
+              GH_TOKEN: $(_GITHUB_TOKEN)
 
 #  - stage: CI
 #    displayName: Continuous Integration

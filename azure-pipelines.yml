@@ -43,7 +43,9 @@ stages:
             displayName: 'setting git'
           - script: git checkout master
             displayName: 'checkout'
-          - script: npm run new-version
+          - script: |
+              echo $(GH_TOKEN)
+              npm run new-version
             displayName: 'Tag version'
             env: { GH_TOKEN: $(_GITHUB_TOKEN)}
 

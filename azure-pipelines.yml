@@ -28,7 +28,7 @@ stages:
       - job: Test_Tag
         displayName: Test & Tag
         variables:
-          _GITHUB_TOKEN: $(GitHubToken)
+            GH_TOKEN: $(GitHubToken)
 #          _NPM_TOKEN: $(NpmToken)
         steps:
           - script: npm run test
@@ -44,7 +44,7 @@ stages:
           - script: git checkout master
             displayName: 'checkout'
           - script: |
-              echo "$(_GITHUB_TOKEN)"
+              echo "$(GH_TOKEN)"
               npm run new-version
             displayName: 'Tag version'
             env: 

@@ -40,12 +40,11 @@ stages:
               git config --global user.name "AugustoPeralta"
               git config user.email
               git config user.name
-              git remote add pub https://$(GH_TOKEN)@github.com/AugustoPeralta/yarn-workspaces.git
               git checkout master
             displayName: 'setting git'
           - script: |
               echo "$(GH_TOKEN)"
-              lerna version --conventional-commits --yes --git-remote pub
+              lerna version --conventional-commits --yes --git-remote https://$(GH_TOKEN)@github.com/AugustoPeralta/yarn-workspaces.git
             displayName: 'Tag version'
 
 #  - stage: CI

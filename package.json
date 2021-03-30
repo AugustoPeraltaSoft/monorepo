@@ -7,8 +7,9 @@
     "test": "lerna run test --since ",
     "test-common": "lerna run test --scope=@gskTest/common",
     "test-deps": "lerna run test --scope={@gskTest/server,@gskTest/front}",
-    "new-version": "lerna version --conventional-commits --yes --create-release github ",
-    "diff": "lerna diff"
+    "new-version": "lerna version --conventional-commits --yes",
+    "diff": "lerna diff",
+    "changed": "lerna ls --since master"
   },
   "name": "yarn-workspaces",
   "version": "1.0.0",

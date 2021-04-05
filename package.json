@@ -9,7 +9,8 @@
     "test-deps": "lerna run test --scope={@gskTest/server,@gskTest/front}",
     "new-version": "lerna version --conventional-commits --yes",
     "diff": "lerna diff",
-    "changed": "lerna changed"
+    "changed": "lerna changed",
+    "list": "lerna list"
 
   },
   "name": "yarn-workspaces",

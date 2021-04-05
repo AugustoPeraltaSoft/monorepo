@@ -45,6 +45,8 @@ stages:
               git fetch origin
               git checkout master
             displayName: 'setting git'
+          - script: yarn run changed
+            displayName: 'changed'
           - script: yarn run new-version
             displayName: 'Tag version'
           - script: yarn run changed

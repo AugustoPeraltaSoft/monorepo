@@ -47,9 +47,11 @@ stages:
             displayName: 'setting git'
           - script: yarn run new-version
             displayName: 'Tag version'
+          - script: yarn run changed
+            displayName: 'changed'
           - script: |
               git tag
-              $TAG = @(-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1]
+              echo "##vso[task.setvariable variable=TAG;isOutput=true] @(-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1]"
               echo $TAG
             displayName: 'pretag'
 

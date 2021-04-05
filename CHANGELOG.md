@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.6.0...v1.7.0) (2021-04-05)
+
+
+### Features
+
+* adding more things ([f3e1ed2](https://github.com/AugustoPeralta/yarn-workspaces/commit/f3e1ed22cdb43d0cb64bad68ff37160d1cc43b46))
+* last change ([287fb31](https://github.com/AugustoPeralta/yarn-workspaces/commit/287fb31173b050b9bfcf68f7f55ca6371c1b3466))
+* removing the lerna commit ([0cecf38](https://github.com/AugustoPeralta/yarn-workspaces/commit/0cecf3874abf483f95ed713b46c8c2f3fd77a705))
+
+
+
+
+
+
 # [1.6.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.5.0...v1.6.0) (2021-03-30)
 
 

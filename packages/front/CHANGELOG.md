@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.6.0...v1.7.0) (2021-04-05)
+
+
+### Features
+
+* last change ([287fb31](https://github.com/AugustoPeralta/yarn-workspaces/commit/287fb31173b050b9bfcf68f7f55ca6371c1b3466))
+
+
+
+
+
+
 # [1.6.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.5.0...v1.6.0) (2021-03-30)
 
 **Note:** Version bump only for package @gskTest/front

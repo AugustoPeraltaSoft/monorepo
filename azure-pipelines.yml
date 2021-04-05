@@ -44,8 +44,8 @@ stages:
               git fetch origin
               git checkout master
 
-          - script: yarn run new-version
-            displayName: 'Tag version'
+#          - script: yarn run new-version
+#            displayName: 'Tag version'
 
           - script: |
               git tag

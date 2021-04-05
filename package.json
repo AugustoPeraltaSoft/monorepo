@@ -9,9 +9,8 @@
     "test-deps": "lerna run test --scope={@gskTest/server,@gskTest/front}",
     "new-version": "lerna version --conventional-commits --yes",
     "diff": "lerna diff",
-    "changed": "lerna changed",
-    "list": "lerna list"
-
+    "changed": "lerna changed --since",
+    "list": "lerna list --since"
   },
   "name": "yarn-workspaces",
   "version": "1.0.0",
@@ -19,5 +18,8 @@
   "license": "MIT",
   "devDependencies": {
     "lerna": "^3.22.1"
+  },
+  "dependencies": {
+    "@lerna/changed": "^4.0.0"
   }
 }

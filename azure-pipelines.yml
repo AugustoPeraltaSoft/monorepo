@@ -65,6 +65,8 @@ stages:
         steps:
           - script: echo $(_TAG)
           - script: yarn run ci:build
+            env:
+             TAG: '$(_TAG)'
 
 #  - stage: CI
 #    displayName: Continuous Integration

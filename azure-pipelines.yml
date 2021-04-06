@@ -35,8 +35,8 @@ stages:
           - script: npm run test
             displayName: 'Test'
 
-#          - script: yarn install
-#            displayName: 'install'
+          - script: yarn install
+            displayName: 'install'
           - script: |
               git config --global user.email "augustoperaltamontero@gmail.com"
               git config --global user.name "AugustoPeralta"
@@ -65,6 +65,8 @@ stages:
         steps:
           - script: echo $(_TAG)
           - script: yarn run ci:build
+            env:
+             TAG: '$(_TAG)'
 
 #  - stage: CI
 #    displayName: Continuous Integration

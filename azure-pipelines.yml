@@ -47,13 +47,23 @@ stages:
 
 #          - script: yarn run new-version
 #            displayName: 'Tag version'
-          - powershell: |
-              git tag
-              echo "##vso[task.setvariable variable=TAG;isOutput=true]$((-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1])"
-              echo $(TAG)
-            displayName: 'pretag'
+          - powershell:
+              echo "##vso[task.setvariable variable=Tag;isOutput=true]$((-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1])"
+            name: setOutputVar
 
-
+  - stage: CI
+    displayName: Continuous Integration
+    dependsOn: Test_Tag
+    variables:
+      _TAG: $[ stageDependencies.Test_Tag.Test_Tag.outputs['setOutputVar.Tag'] ]
+    pool:
+        name: Hosted VS2017
+        demands: npm
+    jobs:
+      - job: var
+        displayName: check variable
+        steps:
+          - script: echo $(_TAG)
 
 #  - stage: CI
 #    displayName: Continuous Integration

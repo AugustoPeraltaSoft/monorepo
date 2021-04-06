@@ -64,6 +64,7 @@ stages:
         displayName: check variable
         steps:
           - script: echo $(_TAG)
+          - script: yarn run ci:build
 
 #  - stage: CI
 #    displayName: Continuous Integration

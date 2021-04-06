@@ -5,6 +5,6 @@
   "license": "MIT",
   "scripts": {
     "test": "echo Common works like a charm!",
-    "ci:build": "echo this is the build script from common"
+    "ci:build": "yarn install && yarn lint --if-present && yarn run build --if-present"
   }
 }

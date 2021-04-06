@@ -5,6 +5,6 @@
   "license": "MIT",
   "scripts": {
     "test": "echo Front works awesome!",
-    "ci:build": "yarn install && yarn run build"
+    "ci:build": "yarn install && yarn lint --if-present && yarn run build --if-present"
   }
 }

@@ -7,6 +7,7 @@
     "@gskTest/common": "^1.1.0"
   },
   "scripts": {
-    "test": "echo Server works fine!"
+    "test": "echo Server works fine!",
+    "ci:build": "echo this is the build script from server"
   }
 }

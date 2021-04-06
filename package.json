@@ -10,7 +10,8 @@
     "new-version": "lerna version --conventional-commits --yes",
     "diff": "lerna diff",
     "changed": "lerna changed --since",
-    "list": "lerna list --since"
+    "list": "lerna list --since",
+    "ci:build": "lerna run ci:build --since $(_TAG)"
   },
   "name": "yarn-workspaces",
   "version": "1.0.0",

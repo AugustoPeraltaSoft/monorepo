@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "echo Front works awesome!"
+    "test": "echo Front works awesome!",
+    "ci:build": "echo this is the build script from front"
   }
 }

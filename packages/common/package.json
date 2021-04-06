@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "test": "echo Common works like a charm!"
+    "test": "echo Common works like a charm!",
+    "ci:build": "echo this is the build script from common"
   }
 }

@@ -8,6 +8,6 @@
   },
   "scripts": {
     "test": "echo Server works fine!",
-    "ci:build": "yarn install && yarn lint --if-present && yarn run build --if-present"
+    "ci:build": "yarn install && yarn run build --if-present"
   }
 }

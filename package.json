@@ -11,7 +11,7 @@
     "diff": "lerna diff",
     "changed": "lerna changed --since",
     "list": "lerna list --since",
-    "ci:build": "lerna run ci:build --since v1.7.0"
+    "ci:build": "lerna run ci:build --since $(TAG)"
   },
   "name": "yarn-workspaces",
   "version": "1.0.0",

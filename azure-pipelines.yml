@@ -29,6 +29,7 @@ stages:
         displayName: Test & Tag
         variables:
             GH_TOKEN: $(GitHubToken)
+            TAG:  $((-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1])
 #          _NPM_TOKEN: $(NpmToken)
         steps:
           - script: npm run test
@@ -46,13 +47,16 @@ stages:
 
 #          - script: yarn run new-version
 #            displayName: 'Tag version'
-
-          - script: |
+          - powershell: |
               git tag
-              echo (-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1]
-              echo "##vso[task.setvariable variable=TAG;isOutput=true] $(@(-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1])"
-              echo $TAG
-            displayName: 'pretag'
+              echo $(TAG)
+
+#          - script: |
+#              git tag
+#              echo (-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1]
+#              echo "##vso[task.setvariable variable=TAG;isOutput=true] $(@(-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1])"
+#              echo $TAG
+#            displayName: 'pretag'
 
 #  - stage: CI
 #    displayName: Continuous Integration

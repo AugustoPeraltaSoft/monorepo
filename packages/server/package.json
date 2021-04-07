@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "echo Server works fine!",
-    "ci:build": "yarn install && yarn run build --if-present"
+    "build": "echo this is the build from server",
+    "ci:build": "yarn run build --if-present"
   }
 }

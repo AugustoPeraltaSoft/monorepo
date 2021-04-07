@@ -77,7 +77,7 @@ stages:
             displayName: publish package
             inputs:
               targetPath: '$(Pipeline.Workspace)'
-              artifact: 'build-${{ parameters.tag }}.zip'
+              artifact: 'build-$(_TAG)'
 
 #  - stage: CI
 #    displayName: Continuous Integration

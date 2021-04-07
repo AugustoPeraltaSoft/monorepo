@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.11.0...v1.12.0) (2021-04-07)
+
+
+### Features
+
+* adding zipping ([d740566](https://github.com/AugustoPeralta/yarn-workspaces/commit/d740566f336bef7d2299fadece35b5e30bb9efb9))
+
+
+
+
+
+
 # [1.10.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.9.0...v1.10.0) (2021-04-07)
 
 **Note:** Version bump only for package @gskTest/common

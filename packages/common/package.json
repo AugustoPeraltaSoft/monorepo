@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo Common works like a charm!",
     "build": "echo this is the build from common",
-    "ci:build": "yarn run build --if-present build"
+    "ci:build": "yarn run build --if-present build",
+    "zip": "cd dist && zip -r ../build-common.zip ."
   }
 }

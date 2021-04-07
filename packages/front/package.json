@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo Front works awesome!",
     "build": "echo this is the build from front",
-    "ci:build": "yarn run build"
+    "ci:build": "yarn run build",
+    "zip": "cd dist && zip -r ../build-front.zip ."
   }
 }

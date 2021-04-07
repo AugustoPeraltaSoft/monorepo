@@ -9,6 +9,6 @@
   "scripts": {
     "test": "echo Server works fine!",
     "build": "echo this is the build from server",
-    "ci:build": "yarn run build --if-present"
+    "ci:build": "yarn run --if-present build"
   }
 }

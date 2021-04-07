@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.12.0...v1.13.0) (2021-04-07)
+
+
+### Features
+
+* last ([48ffd23](https://github.com/AugustoPeralta/yarn-workspaces/commit/48ffd23c4644678bc7fea2745e9d1536258e199f))
+* last ([8574fd0](https://github.com/AugustoPeralta/yarn-workspaces/commit/8574fd089249cb6ecd4ef4a65bc1ca99d7d9b0a4))
+
+
+
+
+
+
 # [1.12.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.11.0...v1.12.0) (2021-04-07)
 
 

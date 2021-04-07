@@ -64,7 +64,7 @@ stages:
         displayName: check variable
         steps:
           - script: echo $(_TAG)
-          - script: yarn run ci:build
+          - script: yarn run ci:build --since $(_TAG)
             env:
              TAG: '$(_TAG)'
 

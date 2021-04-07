@@ -12,7 +12,10 @@
     "changed": "lerna changed --since",
     "list": "lerna list --since",
     "ci:build": "lerna run ci:build",
-    "ci:zip": "lerna run zip"
+    "ci:zip": "lerna run zip",
+    "build": "rimraf dist && cross-env NODE_ENV=production gulp build",
+    "build:extensions": "cross-env-shell func extensions sync --prefix $npm_package_config_azureFunctions_outDir --output bin",
+    "build:webpack": "rimraf dist && cross-env NODE_ENV=production webpack"
   },
   "name": "yarn-workspaces",
   "version": "1.0.0",

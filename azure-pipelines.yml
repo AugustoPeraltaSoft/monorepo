@@ -66,8 +66,18 @@ stages:
         steps:
           - script: echo $(_TAG)
           - script: yarn run ci:build --since $(_TAG)
-            env:
-             TAG: '$(_TAG)'
+      # Run to package
+          - script: yarn install 
+            displayName: prune dependencies
+          - script: cp -R node_modules ./dist
+            displayName: copy node modules
+          - script: yarn ci:zip --since $(_TAG)
+      # publish package as artifact
+          - task: PublishPipelineArtifact@1
+            displayName: publish package
+            inputs:
+              targetPath: '$(Pipeline.Workspace)'
+              artifact: 'build-${{ parameters.tag }}.zip'
 
 #  - stage: CI
 #    displayName: Continuous Integration

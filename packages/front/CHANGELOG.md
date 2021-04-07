@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.9.0...v1.10.0) (2021-04-07)
+
+
+### Features
+
+* changeing just front ([f06b314](https://github.com/AugustoPeralta/yarn-workspaces/commit/f06b314c5fd920adca72e17f983f2cdb1ca6a18a))
+
+
+
+
+
+
 # [1.9.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.8.0...v1.9.0) (2021-04-07)
 
 

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.10.0...v1.11.0) (2021-04-07)
+
+
+### Features
+
+* new change on server ([bf8c14b](https://github.com/AugustoPeralta/yarn-workspaces/commit/bf8c14b23067dbf76f2ff3e630e283c614a2ed1a))
+
+
+
+
+
+
+# [1.10.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.9.0...v1.10.0) (2021-04-07)
+
+**Note:** Version bump only for package @gskTest/server
+
+
+
+
+
+
 # [1.9.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.8.0...v1.9.0) (2021-04-07)
 
 

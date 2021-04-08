@@ -46,17 +46,21 @@ stages:
               git fetch origin
               git checkout master
 
-#          - script: yarn run new-version
-#            displayName: 'Tag version'
+          - script: yarn run new-version
+            displayName: 'Tag version'
           - powershell:
               echo "##vso[task.setvariable variable=Tag;isOutput=true]$((-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1])"
             name: setOutputVar
+          - powershell:
+              echo "##vso[task.setvariable variable=LTag;isOutput=true]$((-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[0])"
+            name: setOutputVarLTag
 
   - stage: CI
     displayName: Continuous Integration
     dependsOn: Test_Tag
     variables:
       _TAG: $[ stageDependencies.Test_Tag.Test_Tag.outputs['setOutputVar.Tag'] ]
+      _LTAG: $[ stageDependencies.Test_Tag.Test_Tag.outputs['setOutputVarLTag.LTag'] ]
     pool:
         vmImage: 'vs2017-win2016'
         demands: npm
@@ -85,7 +89,7 @@ stages:
             displayName: publish package
             inputs:
               targetPath: '$(Build.ArtifactStagingDirectory)'
-              artifact: 'build-$(_TAG)'
+              artifact: 'build-$(_LTAG)'
               publishLocation: 'pipeline'
           
 

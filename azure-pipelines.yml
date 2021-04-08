@@ -58,7 +58,7 @@ stages:
     variables:
       _TAG: $[ stageDependencies.Test_Tag.Test_Tag.outputs['setOutputVar.Tag'] ]
     pool:
-        name: Hosted VS2017
+        name: Ubuntu-16.04
         demands: npm
     jobs:
       - job: var

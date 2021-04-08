@@ -67,7 +67,6 @@ stages:
           - script: echo $(_TAG)
 #          - script: yarn run ci:build --since $(_TAG)
       # Run to package
-          - script: npm install npm-pack-all
           - script:  yarn run ci:zip --since $(_TAG)
           - script: yarn install 
             displayName: prune dependencies

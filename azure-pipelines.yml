@@ -78,8 +78,9 @@ stages:
           - task: PublishPipelineArtifact@1
             displayName: publish package
             inputs:
-              targetPath: '$(Pipeline.Workspace)'
+              targetPath: '$(Pipeline.Workspace)/**/*.tgz'
               artifact: 'build-$(_TAG)'
+              publishLocation: 'pipeline'
 
 #  - stage: CI
 #    displayName: Continuous Integration

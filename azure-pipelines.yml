@@ -78,7 +78,7 @@ stages:
           - task: PublishPipelineArtifact@1
             displayName: publish package
             inputs:
-              targetPath: '$(Pipeline.Workspace)'
+              targetPath: '$(Pipeline.Workspace)/s/packages/**/*.zip'
               artifact: 'build-$(_TAG)'
               publishLocation: 'pipeline'
 

@@ -9,6 +9,6 @@
     "build:extensions": "cross-env-shell func extensions sync --prefix $npm_package_config_azureFunctions_outDir --output bin",
     "build:webpack": "rimraf dist && cross-env NODE_ENV=production webpack",
     "ci:build": "yarn run build",
-    "zip": "node node_modules/.bin/npm-pack-all"
+    "zip": "npm pack"
   }
 }

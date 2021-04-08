@@ -78,7 +78,6 @@ stages:
 
           - task: CopyFiles@2
             inputs:
-              SourceFolder: 'D:\s\packages'
               Contents: '**\*.zip'
               TargetFolder: '$(Build.ArtifactStagingDirectory)'
               OverWrite: true

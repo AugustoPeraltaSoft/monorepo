@@ -75,12 +75,20 @@ stages:
             displayName: copy node modules
           - script: yarn ci:zip --since $(_TAG)
       # publish package as artifact
+
+          - task: CopyFiles@2
+            inputs:
+              SourceFolder: 'D:\s\packages'
+              Contents: '**\*.zip'
+              TargetFolder: '$(Build.ArtifactStagingDirectory)'
+              OverWrite: true
           - task: PublishPipelineArtifact@1
             displayName: publish package
             inputs:
-              targetPath: '$(Pipeline.Workspace)/s/packages/**/*.zip'
+              targetPath: '$(Build.ArtifactStagingDirectory)'
               artifact: 'build-$(_TAG)'
               publishLocation: 'pipeline'
+          
 
 #  - stage: CI
 #    displayName: Continuous Integration

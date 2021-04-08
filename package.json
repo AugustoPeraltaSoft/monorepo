@@ -22,6 +22,7 @@
     "lerna": "^3.22.1"
   },
   "dependencies": {
-    "@lerna/changed": "^4.0.0"
+    "@lerna/changed": "^4.0.0",
+    "npm-pack-all": "^1.12.7"
   }
 }

@@ -64,6 +64,7 @@ stages:
       - job: var
         displayName: check variable
         steps:
+          - script: npm install --global lerna
           - script: echo $(_TAG)
           - script: yarn run ci:build --since $(_TAG)
       # Run to package

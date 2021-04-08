@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.14.0...v1.15.0) (2021-04-08)
+
+
+### Features
+
+* adding zipping ([922ab66](https://github.com/AugustoPeralta/yarn-workspaces/commit/922ab66295a62d8ae760ab5eb6b48beb7c2654d5))
+* adding zipping ([164c219](https://github.com/AugustoPeralta/yarn-workspaces/commit/164c219fe4ec1adb62399021bba499bacd98b113))
+* fixin ([957bba2](https://github.com/AugustoPeralta/yarn-workspaces/commit/957bba28eb5f0dc40edbadfc882a6d0117d4f228))
+
+
+
+
+
+
 # [1.14.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.13.0...v1.14.0) (2021-04-08)
 
 

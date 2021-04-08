@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.13.0...v1.14.0) (2021-04-08)
+
+
+### Features
+
+* adding zipping ([07fad65](https://github.com/AugustoPeralta/yarn-workspaces/commit/07fad651a0e81e16f22fb5378466a433188c93b5))
+* chan ([cb8e4fc](https://github.com/AugustoPeralta/yarn-workspaces/commit/cb8e4fc54c3a5b2a9ae3aa9cbd3b55862e5d5dd1))
+* gopro ([e64c537](https://github.com/AugustoPeralta/yarn-workspaces/commit/e64c537332de2a133a390003db44c3093de24869))
+* gopro ([df1b4b1](https://github.com/AugustoPeralta/yarn-workspaces/commit/df1b4b1ce9e87c4524de66846b36143f119b53b5))
+* hkgcvh ([c533f4d](https://github.com/AugustoPeralta/yarn-workspaces/commit/c533f4d29fc29999a7a25f0908576d5f40114edf))
+* last ([2c51d30](https://github.com/AugustoPeralta/yarn-workspaces/commit/2c51d309d3c6d796f53820f4b987c3a00c1844ee))
+
+
+
+
+
+
 # [1.13.0](https://github.com/AugustoPeralta/yarn-workspaces/compare/v1.12.0...v1.13.0) (2021-04-07)
 
 

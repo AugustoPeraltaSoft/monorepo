@@ -5,9 +5,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo Front works awesome!",
-    "build": "rimraf dist && cross-env NODE_ENV=production gulp build",
-    "build:extensions": "cross-env-shell func extensions sync --prefix $npm_package_config_azureFunctions_outDir --output bin",
-    "build:webpack": "rimraf dist && cross-env NODE_ENV=production webpack",
+    "build": "echo building Front @@@@@@@@@@",
     "ci:build": "yarn run build",
     "pack": "npm-pack-zip",
     "zip": "npm run pack"

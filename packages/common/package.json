@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo Common works like a charm!",
-    "build": "echo this is the build from common",
+    "build": "echo this is the build from common @@@@@@@",
     "ci:build": "yarn run build --if-present build",
     "pack": "npm-pack-zip",
     "zip": "npm run pack"

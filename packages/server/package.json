@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo Server works fine!",
-    "build": "echo this is the build from server",
+    "build": "echo this is the build from server @@@@@@@",
     "ci:build": "yarn run --if-present build",
     "pack": "npm-pack-zip",
     "zip": "npm run pack"

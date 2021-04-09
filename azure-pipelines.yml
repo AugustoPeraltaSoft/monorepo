@@ -32,12 +32,9 @@ stages:
 #            TAG:  $((-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1])
 #          _NPM_TOKEN: $(NpmToken)
         steps:
-          - script: npm run test
-            displayName: 'Test'
-
           - script: yarn install
             displayName: 'install'
-            
+
           - script: |
               git config --global user.email "augustoperaltamontero@gmail.com"
               git config --global user.name "AugustoPeralta"
@@ -48,19 +45,17 @@ stages:
 
           - script: yarn run new-version
             displayName: 'Tag version'
-          - powershell:
+          - powershell: |
               echo "##vso[task.setvariable variable=Tag;isOutput=true]$((-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[1])"
-            name: setOutputVar
-          - powershell:
               echo "##vso[task.setvariable variable=LTag;isOutput=true]$((-split $(git describe --abbrev=0 --tags $(git rev-list --tags --max-count=2)))[0])"
-            name: setOutputVarLTag
+            name: setOutputVar
 
   - stage: CI
     displayName: Continuous Integration
     dependsOn: Test_Tag
     variables:
       _TAG: $[ stageDependencies.Test_Tag.Test_Tag.outputs['setOutputVar.Tag'] ]
-      _LTAG: $[ stageDependencies.Test_Tag.Test_Tag.outputs['setOutputVarLTag.LTag'] ]
+      _LTAG: $[ stageDependencies.Test_Tag.Test_Tag.outputs['setOutputVar.LTag'] ]
     pool:
         vmImage: 'vs2017-win2016'
         demands: npm
@@ -68,8 +63,10 @@ stages:
       - job: var
         displayName: check variable
         steps:
-          - script: echo $(_TAG)
-#          - script: yarn run ci:build --since $(_TAG)
+          - script: echo $(_TAG) ~ $(_LTAG)
+          - script: npm run test
+            displayName: 'Test'
+          - script: yarn run ci:build --since $(_TAG)
       # Run to package
           - script: npm i npm-pack-zip
           - script:  yarn run ci:zip --since $(_TAG)
